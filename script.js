@@ -22,7 +22,41 @@ var churchillSpeech = {
 
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
+
+
+  
+
+//Angie - When the user clicks the “Donate” button, display a prompt that asks this question: How much would you like to donate?
+  var newDonation = window.prompt('How much would you like to donate?');
+
+ //Angie - create new <h3> element
+  var newDonationHeaderElement = document.createElement('h3');
+
+  //Angie - add text to element if <100 or >= 100 and set text to red
+  if (newDonation < 100) {
+    var newDonationHeaderText = document.createTextNode('Thank you for your donation of $' + newDonation + '.');
+  }else if (newDonation >= 100) {
+    newDonationHeaderText = document.createTextNode('Thank you for your very generous donation!');
+    //set to red
+    newDonationHeaderElement.style.color="red";
+};
+
+//Angie - append the text node to <h3> element
+newDonationHeaderElement.appendChild(newDonationHeaderText);
+
+//Angie - find existing element to attach new element  
+  var sideNav = document.getElementById("SideNav");
+    //Angie - append new element to existing element
+    sideNav.appendChild(newDonationHeaderElement);
 });
+
+
+
+
+
+
+
+
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
