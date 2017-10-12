@@ -40,7 +40,7 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
   }else if (newDonation >= 100) {
     newDonationHeaderText = document.createTextNode('Thank you for your very generous donation!');
     //set to red
-    newDonationHeaderElement.style.color="red";
+    newDonationHeaderElement.style.color = "red";
   };
 
   //Angie - append the text node to <h3> element
@@ -72,9 +72,9 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
 
 
   //Angie - create new <p> element for info, BCE and most recent
-  var newParagraph = document.createElement('p'),
-  newParagraphBCE = document.createElement('p'),
-  newParagraphRecency = document.createElement('p');
+  var newParagraph = document.createElement('p');
+  var newParagraphBCE = document.createElement('p');
+  var newParagraphRecency = document.createElement('p');
 
   //Angie - add text to the element
   var newParagraphText = document.createTextNode('This speech was written by ' + speechesArray[0].author + ' in ' + speechesArray[0].year + '.');
@@ -113,10 +113,10 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
 
   //Angie - set Recency Text variable and create text node in place of console statements
   if(speechesArray[0].year === oldest){
-    var newParagraphRecencyText = document.createTextNode('This is the oldest speech on the page.');
+    var newParagraphRecencyText = document.createTextNode("This is the oldest speech on the page.");
   }
   if(speechesArray[0].year === newest){
-    vnewParagraphRecencyText = document.createTextNode('This is the most recent speech on the page.');
+    newParagraphRecencyText = document.createTextNode('This is the most recent speech on the page.');
   }
 
   //Angie - append text node to <p> element
@@ -129,8 +129,8 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
   var consoleDisplay = document.getElementById("ConsoleDisplay");
 
 //Angie - append new element to existing element
-    consoleDisplay.appendChild(newParagraph),
-    consoleDisplay.appendChild(newParagraphBCE),
+    consoleDisplay.appendChild(newParagraph);
+    consoleDisplay.appendChild(newParagraphBCE);
     consoleDisplay.appendChild(newParagraphRecency);
 
 });
@@ -188,7 +188,7 @@ document.getElementById('BtnGhandi').addEventListener('click', function(){
     var newParagraphRecencyText = document.createTextNode('This is the oldest speech on the page.');
   }
   if(speechesArray[1].year === newest){
-    vnewParagraphRecencyText = document.createTextNode('This is the most recent speech on the page.');
+    newParagraphRecencyText = document.createTextNode('This is the most recent speech on the page.');
   }
 
   //Angie - append text node to <p> element
@@ -257,7 +257,7 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
     var newParagraphRecencyText = document.createTextNode('This is the oldest speech on the page.');
   }
   if(speechesArray[2].year === newest){
-    vnewParagraphRecencyText = document.createTextNode('This is the most recent speech on the page.');
+    newParagraphRecencyText = document.createTextNode('This is the most recent speech on the page.');
   }
 
   //Angie - append text node to <p> element
