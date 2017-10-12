@@ -26,8 +26,6 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
 
 
 
-
-
 //Angie - When the user clicks the “Donate” button, display a prompt that asks this question: How much would you like to donate?
   var newDonation = window.prompt('How much would you like to donate?');
 
@@ -50,8 +48,6 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
   var sideNav = document.getElementById("SideNav");
     //Angie - append new element to existing element
     sideNav.appendChild(newDonationHeaderElement);
-
-
 
 
   //Angie - Get all article elements and set variable
@@ -95,7 +91,6 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
 
 
 
-
   var oldest = speechesArray[0].year,
       newest = speechesArray[0].year;
 
@@ -110,13 +105,13 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
 
 
 
-
   //Angie - set Recency Text variable and create text node in place of console statements
   if(speechesArray[0].year === oldest){
     var newParagraphRecencyText = document.createTextNode("This is the oldest speech on the page.");
-  }
-  if(speechesArray[0].year === newest){
+  }else if(speechesArray[0].year === newest){
     newParagraphRecencyText = document.createTextNode('This is the most recent speech on the page.');
+  }else{
+    newParagraphRecencyText = document.createTextNode('This is the neither the oldest nor the most recent speech.')
   }
 
   //Angie - append text node to <p> element
@@ -136,12 +131,8 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
 });
 
 
-
-
 document.getElementById('BtnGhandi').addEventListener('click', function(){
     //Code in here executes when the user clicks the "Ghandi" button.
-
-
 
   //Angie - create new <p> element for info, BCE and most recent
   var newParagraph = document.createElement('p'),
@@ -166,10 +157,8 @@ document.getElementById('BtnGhandi').addEventListener('click', function(){
   newParagraphBCE.appendChild(newParagraphBCEText);
 
 
-
-
-  var oldest = speechesArray[1].year,
-      newest = speechesArray[1].year;
+  var oldest = speechesArray[0].year,
+      newest = speechesArray[0].year;
 
   for(var i = 0; i < speechesArray.length; i++){
     if(speechesArray[i].year < oldest){
@@ -181,20 +170,17 @@ document.getElementById('BtnGhandi').addEventListener('click', function(){
   }
 
 
-
-
   //Angie - set Recency Text variable and create text node in place of console statements
   if(speechesArray[1].year === oldest){
     var newParagraphRecencyText = document.createTextNode('This is the oldest speech on the page.');
-  }
-  if(speechesArray[1].year === newest){
+  }else if(speechesArray[1].year === newest){
     newParagraphRecencyText = document.createTextNode('This is the most recent speech on the page.');
+  }else{
+    newParagraphRecencyText = document.createTextNode('This is the neither the oldest nor the most recent speech.')
   }
 
   //Angie - append text node to <p> element
   newParagraphRecency.appendChild(newParagraphRecencyText);
-
-
 
 
 //Angie - find existing element to attach new element  
@@ -235,10 +221,8 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
   newParagraphBCE.appendChild(newParagraphBCEText);
 
 
-
-
-  var oldest = speechesArray[2].year,
-      newest = speechesArray[2].year;
+  var oldest = speechesArray[0].year,
+      newest = speechesArray[0].year;
 
   for(var i = 0; i < speechesArray.length; i++){
     if(speechesArray[i].year < oldest){
@@ -251,19 +235,17 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
 
 
 
-
   //Angie - set Recency Text variable and create text node in place of console statements
   if(speechesArray[2].year === oldest){
     var newParagraphRecencyText = document.createTextNode('This is the oldest speech on the page.');
-  }
-  if(speechesArray[2].year === newest){
+  }else if(speechesArray[0].year === newest){
     newParagraphRecencyText = document.createTextNode('This is the most recent speech on the page.');
+  }else{
+    newParagraphRecencyText = document.createTextNode('This is the neither the oldest nor the most recent speech.')
   }
 
   //Angie - append text node to <p> element
   newParagraphRecency.appendChild(newParagraphRecencyText);
-
-
 
 
 //Angie - find existing element to attach new element  
