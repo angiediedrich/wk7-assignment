@@ -18,13 +18,14 @@ var churchillSpeech = {
       'authorAge': '42'
     },
     speechesArray = [churchillSpeech, ghandiSpeech, demosthenesSpeech],
-    donatePrompt;
+    donatePrompt,
+    newParagraph = document.createElement('p'),
+    newParagraphBCE = document.createElement('p'),
+    newParagraphRecency = document.createElement('p');
 
 
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
-
-
 
 //Angie - When the user clicks the “Donate” button, display a prompt that asks this question: How much would you like to donate?
   var newDonation = window.prompt('How much would you like to donate?');
@@ -66,12 +67,6 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
 
 
-
-  //Angie - create new <p> element for info, BCE and most recent
-  var newParagraph = document.createElement('p');
-  var newParagraphBCE = document.createElement('p');
-  var newParagraphRecency = document.createElement('p');
-
   //Angie - add text to the element
   var newParagraphText = document.createTextNode('This speech was written by ' + speechesArray[0].author + ' in ' + speechesArray[0].year + '.');
     //Angie - append the text node to <p> element
@@ -103,8 +98,6 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
     }
   }
 
-
-
   //Angie - set Recency Text variable and create text node in place of console statements
   if(speechesArray[0].year === oldest){
     var newParagraphRecencyText = document.createTextNode("This is the oldest speech on the page.");
@@ -116,9 +109,6 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
 
   //Angie - append text node to <p> element
   newParagraphRecency.appendChild(newParagraphRecencyText);
-
-
-
 
 //Angie - find existing element to attach new element  
   var consoleDisplay = document.getElementById("ConsoleDisplay");
@@ -133,11 +123,6 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
 
 document.getElementById('BtnGhandi').addEventListener('click', function(){
     //Code in here executes when the user clicks the "Ghandi" button.
-
-  //Angie - create new <p> element for info, BCE and most recent
-  var newParagraph = document.createElement('p'),
-  newParagraphBCE = document.createElement('p'),
-  newParagraphRecency = document.createElement('p');
 
   //Angie - add text to the element
   var newParagraphText = document.createTextNode('This speech was written by ' + speechesArray[1].author + ' in ' + speechesArray[1].year + '.');
@@ -196,19 +181,10 @@ document.getElementById('BtnGhandi').addEventListener('click', function(){
 document.getElementById('BtnDemosthenes').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Demosthenes" button.
 
-
-
-    //Angie - create new <p> element for info, BCE and most recent
-  var newParagraph = document.createElement('p'),
-  newParagraphBCE = document.createElement('p'),
-  newParagraphRecency = document.createElement('p');
-
   //Angie - add text to the element
   var newParagraphText = document.createTextNode('This speech was written by ' + speechesArray[2].author + ' in ' + speechesArray[2].year + '.');
     //Angie - append the text node to <p> element
     newParagraph.appendChild(newParagraphText);
-
-
 
   //Angie - set BCE Text variable and create text node in place of console statements
   if(speechesArray[2].yearIsBCE === true){
@@ -232,8 +208,6 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
       newest = speechesArray[i].year;
     }
   }
-
-
 
   //Angie - set Recency Text variable and create text node in place of console statements
   if(speechesArray[2].year === oldest){
